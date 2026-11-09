@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact form example</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 420px; margin: 40px auto; padding: 0 16px; }
+    label { display: block; margin-top: 12px; }
+    input, textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+    .hp { position: absolute; left: -9999px; }  /* honeypot: hidden from people, filled by bots */
+    button { margin-top: 16px; padding: 10px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Оставить заявку</h1>
+  <!-- change the address to where habar runs -->
+  <form method="post" action="http://127.0.0.1:8000/forms/contact">
+    <label>Имя <input name="name" required maxlength="200"></label>
+    <label>E-mail <input name="email" type="email" required maxlength="200"></label>
+    <label>Телефон <input name="phone" maxlength="50"></label>
+    <label>Сообщение <textarea name="message" rows="4" maxlength="10000"></textarea></label>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off">
+    <button type="submit">Отправить</button>
+  </form>
+</body>
+</html>
