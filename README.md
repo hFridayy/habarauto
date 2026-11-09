@@ -4,7 +4,7 @@
 
 [![tests](https://github.com/hFridayy/habar/actions/workflows/tests.yml/badge.svg)](https://github.com/hFridayy/habar/actions/workflows/tests.yml)
 
-*A visitor fills in a form on your site, or another system sends
+A visitor fills in a form on your site, or another system sends
 an event, and habar:
 
 1. creates a **lead** (or a **task**) in **Bitrix24 CRM** through its REST API,
