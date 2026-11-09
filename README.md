@@ -26,7 +26,7 @@ an event, and habar:
 ## Quick start
 
 ```bash
-git clone https://github.com/hFridayy/habar && cd habar
+git clone https://github.com/hFridayy/habarauto && cd habar
 python -m venv venv && source venv/bin/activate
 pip install -e ".[dev]"
 cp .env.example .env      # fill in the Bitrix24 webhook, SMTP settings and an API key
@@ -47,12 +47,12 @@ curl -X POST http://127.0.0.1:8000/events \
   -H "X-API-Key: $HABAR_API_KEY" -H "Idempotency-Key: order-555" -H "Content-Type: application/json" \
   -d '{"title": "Новый клиент", "message": "Хочу демо",
        "notify": ["manager@company.kz"], "reply_to_contact": true,
-       "contact": {"name": "Айгерим", "email": "aigerim@example.com", "phone": "+77001234567"}}'
+       "contact": {"name": "user name", "email": "username@example.com", "phone": "+7700xxxxxxx"}}'
 ```
 ```json
 {"crm": {"status": "created", "type": "lead", "id": 101},
  "email": {"status": "sent", "to": ["manager@company.kz"]},
- "auto_reply": {"status": "sent", "to": "aigerim@example.com"}}
+ "auto_reply": {"status": "sent", "to": "usernameim@example.com"}}
 ```
 
 | Endpoint | Purpose |
